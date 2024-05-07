@@ -7,3 +7,4 @@ urlpatterns = [
     #path('accounts', include('accounts.urls')),
     path('', include('app1.urls')),
 ]
+#this is a test
