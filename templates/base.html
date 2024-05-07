@@ -1,0 +1,26 @@
+
+<header>
+    <div>
+        <h1> <a href = "{% url 'homepage' %}"> Asosiy Sahifa </a></h1>
+    </div>
+</header>
+{% if user.is_authenticated %}
+    <p> Xush kelibsiz {{user.username}}</p>
+    <p><a href="{% url 'logout'%}"> Saytdan chiqish </a></p>
+{% else %}
+<p> Siz saytga kirmagansiz</p>
+    <p> <a href="{% url 'login'%}"> Saytga kirish </a></p>
+    {% comment %} <a href="{%url 'signup'%}"> SignUp </a></p> {% endcomment %}
+{%endif%}
+
+
+
+{%block content%}        
+
+{%endblock content%}
+
+<footer>
+    <div>
+        <h3> <a href={% url "newpost" %}> Yangi post qo`shish </a> </h3>
+    </div>
+</footer>    
